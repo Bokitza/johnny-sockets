@@ -4,6 +4,7 @@ const sensorElement = document.getElementById("sensor")
 
 
 
+// this is what happens when the server sends sensor data   
 socket.on("sensor change",(sensorData)=>{
     sensorElement.innerText = sensorData
     if(sensorData>450){
