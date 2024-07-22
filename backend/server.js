@@ -7,7 +7,7 @@ board.on("ready", function() {
 
   const lightSensor = new five.Sensor({
     pin: "A0", 
-    freq: 300, 
+    freq: 100, 
   });
   // Board is now ready
 
