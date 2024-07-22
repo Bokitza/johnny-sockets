@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        transition: all 1s;
+    }
+    #sensor{font-size: 50px;}
+</style>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+<body>
+   
+    <h1>Arduino Controller</h1>
+
+    <h2>Sensor Reading:</h2>
+    <p id="sensor"></p>
+    <!-- <button onclick="clickUp()" >Up</button> <br>
+    <button onclick="clickLeft()" >Left</button>
+    <button onclick="clickRight()" >Right</button> <br>
+    <button onclick="clickDown()" >Down</button> <br>
+    <input type="range" oninput="changeRange()"> <br>
+    <input type="text" oninput="changeText()"> -->
+</body>
+<script src="app.js"></script>
+</html>
