@@ -3,10 +3,8 @@ var five = require("johnny-five");
 var board = new five.Board();
 const io = new Server({cors:{origin:"*"}})
 
-
 board.on("ready", function() {
 
-  const led = new five.Led("13")
   const lightSensor = new five.Sensor({
     pin: "A0", 
     freq: 300, 
@@ -14,24 +12,15 @@ board.on("ready", function() {
   // Board is now ready
 
   io.on("connection", (socket) => {
-
     //Browser is connected
     lightSensor.on("change",function(){
       const sensorValue = this.value
-
       socket.emit("sensor change",this.value)
-
-
-
-
     });
-
-
     socket.on("up",()=>{
       console.log("up")
     })
     socket.on("down",()=>{
-
       console.log("down")
     })
     socket.on("left",()=>{
@@ -42,9 +31,6 @@ board.on("ready", function() {
     })
     console.log("the browser is connected now to the server.")
   });
-
-
-  
 });
 
 
